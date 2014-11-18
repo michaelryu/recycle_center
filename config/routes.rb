@@ -4,11 +4,10 @@ Rails.application.routes.draw do
   root 'pages#home'
 	get 'help'    => 'pages#help'
 	get 'service'    => 'pages#service'
-	get 'buysell'    => 'pages#buysell'
-	get 'demolition'    => 'pages#demolition'
-	get 'waste'    => 'pages#waste'
-	get 'appliance'    => 'pages#appliance'
+	get 'product'    => 'pages#product'
+	get 'question'    => 'pages#question'
 	get 'signup'  => 'users#new'
+	resources :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.

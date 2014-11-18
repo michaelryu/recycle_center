@@ -5,18 +5,13 @@ class PagesController < ApplicationController
   def help
   end
 
-  def appliance
-  end
-
-  def waste
-  end
-
-  def demolition
-  end
-
-  def buysell
+  def product
   end
 
   def service
   end
+	
+	def question
+	end
+	
 end
