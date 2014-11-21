@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def home
   end
 
-  def help
+  def announcement
   end
 
   def all

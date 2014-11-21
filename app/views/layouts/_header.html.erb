@@ -3,9 +3,8 @@
   	<%= link_to "재활용 센터", root_path, id: "logo" %>
   	<nav>
     	<ul class="nav navbar-nav pull-right">
-      	<li><%= link_to "Help", help_path %></li>
+      	<li><%= link_to "Announcements", announcement_path %></li>
       	<li><%= link_to "Questions", question_path %></li>
-        <li><%= link_to "Service", service_path %></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 						Products <b class="caret"></b>
@@ -23,7 +22,6 @@
 					</ul>
 				</li>
 				<% if logged_in? %>
-          <li><%= link_to "Placeholder", '#' %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>

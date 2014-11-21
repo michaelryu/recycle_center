@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'users/new'
 
   root 'pages#home'
-	get 'help'    => 'pages#help'
+	get 'announcement'    => 'pages#announcement'
 	get 'all'    => 'pages#all'
 	get 'service'    => 'pages#service'
 	get 'product'    => 'pages#product'
