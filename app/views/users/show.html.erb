@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-8">
+    <% if @user.listings.any? %>
+      <h3>Listings (<%= @user.listings.count %>)</h3>
+      <ol class="listings">
+        <%= render @listings %>
+      </ol>
+      <%= will_paginate @listings %>
+    <% end %>
+  </div>
+</div>

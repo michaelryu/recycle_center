@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/show'
+
   get 'sessions/new'
 
   get 'users/new'
 
   root 'pages#home'
 	get 'help'    => 'pages#help'
+	get 'all'    => 'pages#all'
 	get 'service'    => 'pages#service'
 	get 'product'    => 'pages#product'
 	get 'question'    => 'pages#question'
@@ -14,6 +19,9 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 
 	resources :users
+	resources :listings,          only: [:create, :destroy]
+	resources :tags, only: [:index, :show]
+
 	
 
 

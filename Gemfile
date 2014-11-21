@@ -17,6 +17,7 @@ gem 'turbolinks',              '2.3.0'
 gem 'jbuilder',                '2.2.3'
 gem 'rails-html-sanitizer',    '1.0.1'
 gem 'sdoc',                    '0.4.0', group: :doc
+gem 'acts-as-taggable-on',     '3.4'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

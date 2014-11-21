@@ -1,0 +1,12 @@
+<% if logged_in? && current_user.admin? %>	
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<section class="listing_form">
+				<%= render 'shared/listing_form' %> 
+			</section>
+		</div>
+	</div>
+<% end %>	
+<h3 class="center">Listings Products</h3>
+<%= render 'shared/product' %>
