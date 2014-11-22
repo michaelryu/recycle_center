@@ -1,6 +1,11 @@
 <h1><%= @tag.name %></h1>
+
 <div class="center">
-<ol class="listings">
-	<div class="thumbnail"><%= render @posts %></div>
-</ol>
+ <% if @listings.any? %>
+ <% @listings.each do |posts| %>
+  <ol class="listings">
+		<div class="thumbnail"><%= render posts %></div>
+  </ol>
+	<% end %>  
+	<% end %>
 </div>

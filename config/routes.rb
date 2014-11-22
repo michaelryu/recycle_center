@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 	resources :users
 	resources :listings,          only: [:create, :destroy]
 	resources :tags, only: [:index, :show]
-
+	resources :posts
 	
 
 

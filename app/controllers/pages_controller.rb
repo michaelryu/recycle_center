@@ -4,6 +4,8 @@ class PagesController < ApplicationController
   end
 
   def announcement
+		@post = current_user.posts.build if logged_in?
+		@announcements = Post.paginate(page: params[:page])
   end
 
   def all
@@ -14,7 +16,5 @@ class PagesController < ApplicationController
   def service
   end
 	
-	def question
-	end
-	
+
 end

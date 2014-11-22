@@ -4,6 +4,7 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$logo-green: #4caf50;
 
 /* universal */
 
@@ -12,7 +13,7 @@ html {
 }
 
 body {
-  padding-top: 60px;
+  padding-top: 70px;
 }
 
 section {
@@ -28,6 +29,37 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+.btn-primary {
+  background-color: $logo-green;
+  border-color: $logo-green;
+	border-radius: 0;
+  &:hover {
+    background-color: #388e3c;
+    border-color: #388e3c;
+  }
+	margin-bottom: 20px;
+}
+
+.fieldlabel {
+	color: $logo-green;
+}
+
+.blankets {
+	margin-top: 40px;
+}
+
+.cover{
+	background-size: contain;
+	-webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+	color: rgb(255, 255, 255);
+	position: relative;
+	min-height: 770px;
+	background: url("https://unsplash.imgix.net/23/make-your-own-path.JPG?q=75&fm=jpg&s=303e1e225793deadcebf734f3b055352") no-repeat scroll 0px 100% / cover transparent;
 }
 
 /* typography */
@@ -64,15 +96,41 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: $logo-green;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: white;
+    color: #388e3c;
     text-decoration: none;
   }
+}
+
+.navbar-custom {
+  background-color: rgba(255, 255, 255, 0.90);
+  color: #e51c23;
+	padding: 10px;
+  border-bottom: 3px solid $logo-green;
+  .navbar-nav > li > a {
+    color:$logo-green;
+		&:hover {
+			color: #388e3c;
+		}
+    .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+      color: #388e3c;
+      background-color:#388e3c;
+    }
+  }
+
+  .navbar-brand {
+    color:#eeeeee;
+  }
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #fff;
+    color: #4CAF50;
 }
 
 /* footer */
@@ -151,11 +209,15 @@ $gray-medium-light: #eaeaea;
 
 /* forms */
 
+.field {
+	margin-top: 10px;
+}
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 1px solid $logo-green;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+	color: black;
 }
 
 input {
@@ -192,30 +254,29 @@ input {
 }
 
 /* listings */
+.deletebox {
+	margin-left: 80%;
+}
+.thumbnail {
+	border-color: $logo-green;
+	border-radius: 0;
+}
 
 .listings {
 	display: inline-block;
   list-style: none;
-  padding: 1em;
-	margin: 1em;
+	margin-right: 40px;
   li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
-  }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
   }
   .title {
-    
-    img {
-      display: block;
-      padding: 5px 0;
-    }
+		color: $logo-green;
+		font-weight: bold;
+		padding: 15px;
+
   }
-  .timestamp {
-    color: $gray-light;
+	img {
     display: block;
+		padding-bottom: 0;
   }
 }
 
@@ -233,6 +294,37 @@ span.picture {
   }
 }
 
+/* announcements */
+
+.post {
+  list-style: none;
+  padding: 0;
+  li {
+    border: 1px solid $logo-green;
+		margin-top: 15px;
+  }
+  .title {
+		padding: 20px;
+		a{
+		color: $logo-green;
+		font-weight: bold;
+		}
+  }
+  .content {
+		padding-top: 15px;
+    display: block;
+    margin-left: 60px;
+		padding-right: 60px;
+    white-space: pre-wrap;
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+		margin-left: 70%;
+		padding-bottom: 10px
+  }
+  
+}
 
 
 

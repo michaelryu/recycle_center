@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121012135) do
+ActiveRecord::Schema.define(version: 20141121231053) do
 
   create_table "listings", force: true do |t|
     t.string   "title"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20141121012135) do
 
   add_index "listings", ["user_id", "created_at"], name: "index_listings_on_user_id_and_created_at"
   add_index "listings", ["user_id"], name: "index_listings_on_user_id"
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

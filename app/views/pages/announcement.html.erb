@@ -1,2 +1,18 @@
-<h1>Pages#announcement</h1>
-<p>Find me in app/views/pages/help.html.erb</p>
+<div class="container">
+<% if logged_in? && current_user.admin? %>	
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-xs-6">
+			<section class="post_form">
+				<%= render 'shared/post_form' %> 
+			</section>
+		</div>
+	</div>
+<% end %>	
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-xs-6">
+		<%= render 'shared/announcements' %>
+	</div>
+</div>
+</div>
