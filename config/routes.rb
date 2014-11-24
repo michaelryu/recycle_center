@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 	get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-
+	get 'business'   => 'pages#business'
 	resources :users
 	resources :listings,          only: [:create, :destroy]
-	resources :tags, only: [:index, :show]
+	resources :tags, only: [:index, :show], path: 't'
 	resources :posts
 	
 

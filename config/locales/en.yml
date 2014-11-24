@@ -19,5 +19,22 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
 en:
-  hello: "Hello world"
+
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: (이메일 은 비워 둘 수 없습니다)
+              taken: (이 이메일 은 이미 사용 중입니다)
+              invalid: (이메일 이 잘못되었습니다)
+            password:
+              blank: (비밀번호 은 비워 둘 수 없습니다)
+              confirmation: (비밀번호가 일치하지 않습니다)
+            password_confirmation:
+              blank: (비밀번호 확인 은 비워 둘 수 없습니다)
+            name:
+              blank: (이름은 비워 둘 수 없습니다)

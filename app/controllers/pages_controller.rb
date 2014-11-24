@@ -10,11 +10,12 @@ class PagesController < ApplicationController
 
   def all
 		@listing = current_user.listings.build if logged_in?
-		@product_items = Listing.paginate(page: params[:page])
+		@product_items = Listing.paginate(page: params[:page], :per_page => 30)
   end
 
   def service
   end
+	
 	
 
 end

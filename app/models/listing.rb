@@ -7,6 +7,7 @@ class Listing < ActiveRecord::Base
 	acts_as_taggable
 	validates :picture, presence: true
 	validate  :picture_size
+	validates :tag_list, presence: true
 
   private
 

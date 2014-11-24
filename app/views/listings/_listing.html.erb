@@ -1,14 +1,13 @@
 <li id="listing-<%= listing.id %>">
   <div class="title">
   	<%= listing.title %>
-  	<div class="deletebox">
+  	<div class="realprice"><%= listing.realprice %></div>
+	</div>
+	<%= image_tag listing.picture.url if listing.picture? %>  
+	<div class="deletebox">
     	<% if current_user?(listing.user) && current_user.admin?%>
       	<%= link_to "삭제", listing, method: :delete,
                                        data: { confirm: "You sure?" } %>
     	<% end %>
   	</div>
-	</div>
-	<%= image_tag listing.picture.url if listing.picture? %>
-	<span><%= listing.price %></span>
-  
 </li>
