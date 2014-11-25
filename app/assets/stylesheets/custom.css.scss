@@ -288,9 +288,11 @@ input {
   li {
   }
   .title {
+		padding: 15px;
+		a{
 		color: $logo-green;
 		font-weight: bold;
-		padding: 15px;
+		}
 		.realprice {
 			float: right;
 			color: black;
@@ -310,11 +312,39 @@ aside {
   }
 }
 
+.listingb {
+	margin-top: 40px;
+	padding: 0px 30px 15px 30px;
+	border: 1px solid $logo-green;
+}
 span.picture {
   margin-top: 10px;
   input {
     border: 0;
   }
+}
+
+.listingshow {
+	img {
+		margin-top: 40px;
+	}
+	h1, h2, p {
+		color: $logo-green;
+	}
+	h1 {
+		border-bottom: 1px solid $logo-green;
+		margin-top: -5px;
+		margin-left: -30px;
+		margin-right: -30px;
+		line-height: 2em;
+	}
+	.gline {
+		padding-top: 20px;
+		margin-bottom: 25px;
+		margin-left: -30px;
+		margin-right: -30px;
+		border-bottom: 1px solid $logo-green;
+	}
 }
 
 /* announcements */
@@ -428,8 +458,9 @@ span.picture {
 	}
 }
 
-.blur {
-	margin: 120px;
-	padding: 100px;
+.smartscroll-controls {
+	color: black;
 }
+
+
 

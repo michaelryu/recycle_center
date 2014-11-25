@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   delete 'logout'  => 'sessions#destroy'
 	get 'business'   => 'pages#business'
 	resources :users
-	resources :listings,          only: [:create, :destroy]
+	resources :listings,          only: [:create, :destroy, :show]
 	resources :tags, only: [:index, :show], path: 't'
 	resources :posts
 	

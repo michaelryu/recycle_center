@@ -1,7 +1,6 @@
 <li id="listing-<%= listing.id %>">
   <div class="title">
-  	<%= listing.title %>
-  	<div class="realprice"><%= listing.realprice %></div>
+  	<%= link_to listing.title, listing %>
 	</div>
 	<%= image_tag listing.picture.thumb.url if listing.picture? %>  
 	<div class="deletebox">
@@ -11,3 +10,6 @@
     	<% end %>
   	</div>
 </li>
+<% if 5 == 1 %>
+	<div class="realprice"><%= listing.realprice %></div>
+<% end %>

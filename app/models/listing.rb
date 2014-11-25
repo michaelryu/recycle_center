@@ -3,7 +3,7 @@ class Listing < ActiveRecord::Base
 	default_scope -> { order('created_at DESC') }
 	mount_uploader :picture, PictureUploader
   validates :user_id, presence: true
-  validates :title, presence: true, length: { maximum: 20 }
+  validates :title, presence: true, length: { maximum: 100 }
 	acts_as_taggable
 	validates :picture, presence: true
 	validate  :picture_size

@@ -17,6 +17,10 @@ class ListingsController < ApplicationController
 		@listing.destroy
     redirect_to request.referrer || all_path
   end
+	
+	def show
+		@listing = Listing.find(params[:id])
+	end
 
   private
 
