@@ -14,7 +14,14 @@ end
   1..20.times.each do |n|
     Post.create(
       title: "Test #{n}",
-      content: "This is a test for the announcments",
+      content: "This is a test for the announcments
+This is a test for the announcments
+This is a test for the announcments
+This is a test for the announcments
+
+This is a test for the announcments
+
+This is a test for the announcments",
       user: User.first
     )
   end
