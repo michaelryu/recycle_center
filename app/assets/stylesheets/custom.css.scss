@@ -45,12 +45,11 @@ textarea {
 
 .mobi {
 	.container{
-		width: 100%;
-	}
-	.content-container {
 		width: 80%;
-    margin-left: 10%;
-    margin-right:10%;
+		margin-right:auto;
+    margin-left:auto;
+    position:relative;
+    display:block;
 	}
 }
 
