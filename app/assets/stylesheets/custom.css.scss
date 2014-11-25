@@ -31,6 +31,19 @@ textarea {
   }
 }
 
+.row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container{
+  .row{
+  	margin-left: -15px;
+    margin-right: -15px;
+	}
+}
+
+
 .btn-primary {
   background-color: $logo-green;
   border-color: $logo-green;
