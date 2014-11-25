@@ -15,13 +15,11 @@ end
     Post.create(
       title: "Test #{n}",
       content: "This is a test for the announcments
-This is a test for the announcments
-This is a test for the announcments
-This is a test for the announcments
+This is a test for the announcments This is a test for the announcments This is a test for the announcments
 
 This is a test for the announcments
 
-This is a test for the announcments",
+This is a test for the announcments This is a test for the announcments",
       user: User.first
     )
   end
