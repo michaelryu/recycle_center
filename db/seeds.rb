@@ -24,7 +24,7 @@ end
 			title: "Listing #{i}",
 			realprice: "$#{i}",
 			user: User.first,
-			picture: File.open("app/assets/images/#{i}.png"),
+			picture: File.open("app/assets/images/seed/#{i}.png"),
 			).tap do |listing|
 				if i > 5
 					listing.tag_list.add(tags[0])

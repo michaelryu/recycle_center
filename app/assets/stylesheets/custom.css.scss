@@ -353,7 +353,7 @@ span.picture {
 /* home */
 
 .maintitle {
-	font-size: 4.5em;
+	
 }
 
 .cover{
@@ -364,8 +364,14 @@ span.picture {
   background-size: 100% auto;
 	color: rgb(255, 255, 255);
 	position: relative;
-	min-height: 795px;
+	min-height: 790px;
 	background-color: $logo-green;
+	.center{
+		margin-top: 220px;
+	}
+	p {
+		font-size: 4.5em;
+	}
 }
 
 .covertwo {
@@ -376,7 +382,25 @@ span.picture {
   background-size: 100% auto;
 	color: rgb(255, 255, 255);
 	position: relative;
-	min-height: 600px;
+	min-height: 790px;
+	h1 {
+		margin-bottom: 50px;
+	}
+	p, h1, h2 {
+		color: $logo-green;
+	}
+	p {
+		margin-bottom: 50px;
+		float: left;
+		font-size: 2em;
+		padding-left: 14%;
+		padding-right: 14%;
+		line-height: 2em;
+		font-weight: 200;
+	}
+	.container {
+		margin-top: 110px;
+	}
 }
 
 .coverthree {
@@ -386,12 +410,26 @@ span.picture {
   -o-background-size: 100% auto;
   background-size: 100% auto;
 	position: relative;
-	min-height: 400px;
+	min-height: 766px;
 	background-color: $logo-green;
+	
+	.maps {
+		margin-top: 30px;
+		margin-left: 15px;
+	}
+	
+	h1 {
+		color: white;
+		margin-right: 40px;
+		margin-bottom: 100px;
+	}
+	.three {
+			margin-top: 120px;
+	}
 }
 
 .blur {
-		margin: 120px;
-		padding: 100px;
+	margin: 120px;
+	padding: 100px;
 }
 
