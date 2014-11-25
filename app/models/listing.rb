@@ -8,6 +8,7 @@ class Listing < ActiveRecord::Base
 	validates :picture, presence: true
 	validate  :picture_size
 	validates :tag_list, presence: true
+	has_many :comments
 
   private
 

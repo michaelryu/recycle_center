@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'tags/index'
 
   get 'tags/show'
@@ -21,7 +22,9 @@ Rails.application.routes.draw do
 	resources :users
 	resources :listings,          only: [:create, :destroy, :show]
 	resources :tags, only: [:index, :show], path: 't'
-	resources :posts
+	resources :posts do
+		resources :comments 
+	end
 	
 
 
