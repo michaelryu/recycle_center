@@ -2,7 +2,7 @@
   <div class="title">
   	<%= link_to listing.title, listing %>
 	</div>
-	<%= image_tag listing.picture.thumb.url if listing.picture? %>  
+	<%= link_to(image_tag(listing.picture.thumb.url), listing) %>
 	<div class="deletebox">
     	<% if current_user?(listing.user) && current_user.admin? %>
       	<%= link_to "삭제", listing, method: :delete,

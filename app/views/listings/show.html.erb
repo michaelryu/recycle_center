@@ -10,8 +10,7 @@
 		<p><%= @listing.realprice %></p>
 		<p><%= @listing.created_at.strftime("%Y-%m-%d") %></p>
 		<div class="gline"></div>
-		<p>전화: 042) 524-8887</p>
-		<p>전시장: 대전시 유성구 구암동 419-12번지 </p>
+		<p class="whitespace"><%= @listing.detail %></p>
 	</div>
 </div>
 </div>

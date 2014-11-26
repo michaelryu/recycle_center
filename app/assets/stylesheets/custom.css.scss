@@ -320,6 +320,10 @@ aside {
 	margin-top: 40px;
 	padding: 0px 30px 15px 30px;
 	border: 1px solid $logo-green;
+	
+	.whitespace {
+		white-space: pre-wrap;
+	}
 }
 span.picture {
   margin-top: 10px;
