@@ -272,6 +272,12 @@ input {
 }
 /* listings */
 
+.lis {
+	.center {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
 .highlight {
 	color: $logo-green;
 }
@@ -288,7 +294,8 @@ input {
 .listings {
 	display: inline-block;
   list-style: none;
-	margin-right: 45px;
+	padding-left: 15px;
+	padding-right: 15px;
   li {
   }
   .title {
@@ -306,6 +313,8 @@ input {
 	img {
     display: block;
 		padding-bottom: 0;
+		max-width: 100%;
+		height: auto;
   }
 }
 
@@ -469,6 +478,11 @@ span.picture {
 	margin-top: 230px;
 	font-size: 2.5em;
 	}
+	
+	.item {
+		position: absolute;
+		margin-top: 400px;
+	}
 
 }
 
@@ -524,5 +538,13 @@ span.picture {
 	.three {
 			margin-top: 120px;
 	}
+	
+	p {
+		margin-left: -40px;
+		color: white;
+		font-size: 1.6em;
+	}
 }
+
+
 

@@ -1,5 +1,5 @@
 <h1 class="highlight"><%= @tag.name %></h1>
-
+<div class="lis">
 <div class="center">
  <% if @listings.any? %>
  <% @listings.each do |posts| %>
@@ -8,4 +8,5 @@
   </ol>
 	<% end %>  
 	<% end %>
+</div>
 </div>
