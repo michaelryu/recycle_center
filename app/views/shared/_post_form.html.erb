@@ -1,13 +1,10 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-  	<%= f.label :title, class: "fieldlabel", value: "제목" %>
+    <%= f.label :title, class: "fieldlabel", value: "제목" %>
     <%= f.text_field :title %>
-		
-		<%= f.label :content, class: "fieldlabel", value: "내용" %>
-		<%= f.text_area :content %>
+    <%= f.label :content, class: "fieldlabel", value: "내용" %>
+    <%= f.text_area :content %>
   </div>
   <%= f.submit "게시", class: "btn btn-primary" %>
 <% end %>
-
-

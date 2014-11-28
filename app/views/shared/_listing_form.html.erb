@@ -1,22 +1,15 @@
 <%= form_for(@listing, html: { multipart: true }) do |f| %>
   <div class="field">
-  
-  	<%= f.label :title, class: "fieldlabel", value: "제품명" %>
+    <%= f.label :title, class: "fieldlabel", value: "제품명" %>
     <%= f.text_field :title %>
-    
     <%= f.label :realprice, class: "fieldlabel", value: "가격" %>
     <%= f.text_field :realprice, placeholder: "₩₩₩" %>
-    
-		<%= f.select :tag_list, options_for_select([["추천상품", "추천상품"], ["계절상품", "계절상품"], ["가구", "가구"], ["가전제품", "가전제품"], ["사무용품", "사무용품"], ["업무용품", "업무용품"]]) %>
-		
-		<%= f.label :detail, class: "fieldlabel", value: "정보" %>
+    <%= f.select :tag_list, options_for_select([["추천상품", "추천상품"], ["계절상품", "계절상품"], ["가구", "가구"], ["가전제품", "가전제품"], ["사무용품", "사무용품"], ["업무용품", "업무용품"]]) %>
+    <%= f.label :detail, class: "fieldlabel", value: "정보" %>
     <%= f.text_area :detail %>
-    
   </div>
   <span class="picture">
-  	<%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+    <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>
   <%= f.submit "게시", class: "btn btn-primary" %>
 <% end %>
-
-

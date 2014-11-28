@@ -1,12 +1,12 @@
-<h1 class="highlight"><%= @tag.name %></h1>
-<div class="lis">
-<div class="center">
- <% if @listings.any? %>
- <% @listings.each do |posts| %>
-  <ol class="listings">
-		<div class="thumbnail"><%= render posts %></div>
-  </ol>
-	<% end %>  
-	<% end %>
-</div>
+<h1 class='highlight'><%= @tag.name %></h1>
+<div class='lis'>
+  <div class='center'>
+    <% if @listings.any? %>
+      <% @listings.each do |posts| %>
+        <ol class='listings'>
+          <div class='thumbnail'><%= render posts %></div>
+        </ol>
+      <% end %>
+    <% end %>
+  </div>
 </div>

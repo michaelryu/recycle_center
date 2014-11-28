@@ -1,18 +1,16 @@
-<% if logged_in? && current_user.admin? %>	
-	<div class="row">
-		<div class="col-md-4"></div>
-		<div class="col-md-4">
-			<section class="listing_form">
-				<%= render 'shared/listing_form' %> 
-			</section>
-		</div>
-	</div>
-<% end %>	
+<% if logged_in? && current_user.admin? %>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <section class="listing_form">
+        <%= render 'shared/listing_form' %>
+      </section>
+    </div>
+  </div>
+<% end %>
 <div class="lis">
-<div class="center">
-<div class="blankets"></div>
-<%= render 'shared/product' %>
+  <div class="center">
+    <div class="blankets"></div>
+    <%= render 'shared/product' %>
+  </div>
 </div>
-</div>
-
-

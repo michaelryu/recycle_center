@@ -1,17 +1,17 @@
 <div class="listingshow">
-<div class="container">
-<div class="col-xs-12 col-md-8">
-	<%= image_tag @listing.picture.url %>
-</div>
-<div class="col-xs-6 col-lg-4">
-	<div class="listingb">
-		<h1><%= @listing.title %></h1>
-		<p><%= @listing.tag_list %></p>
-		<p><%= @listing.realprice %></p>
-		<p><%= @listing.created_at.strftime("%Y-%m-%d") %></p>
-		<div class="gline"></div>
-		<p class="whitespace"><%= @listing.detail %></p>
-	</div>
-</div>
-</div>
+  <div class="container">
+    <div class="col-xs-12 col-md-8">
+      <%= image_tag @listing.picture.url %>
+    </div>
+    <div class="col-xs-6 col-lg-4">
+      <div class="listingb">
+        <h1><%= @listing.title %></h1>
+        <p><%= @listing.tag_list %></p>
+        <p><%= @listing.realprice %></p>
+        <p><%= @listing.created_at.strftime("%Y-%m-%d") %></p>
+        <div class="gline"></div>
+        <p class="whitespace"><%= @listing.detail %></p>
+      </div>
+    </div>
+  </div>
 </div>

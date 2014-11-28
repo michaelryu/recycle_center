@@ -8,24 +8,24 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
-  root 'pages#home'
-	get 'announcement'    => 'pages#announcement'
-	get 'all'    => 'pages#all'
-	get 'service'    => 'pages#service'
-	get 'product'    => 'pages#product'
-	get 'question'    => 'pages#question'
-	get 'signup'  => 'users#new'
-	get    'login'   => 'sessions#new'
+  root "pages#home"
+  get 'announcement'    => 'pages#announcement'
+  get 'all'    => 'pages#all'
+  get 'service'    => 'pages#service'
+  get 'product'    => 'pages#product'
+  get 'question'    => 'pages#question'
+  get 'signup'  => 'users#new'
+  get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
-	get 'business'   => 'pages#business'
-	resources :users
-	resources :listings,          only: [:create, :destroy, :show]
-	resources :tags, only: [:index, :show], path: 't'
-	resources :posts do
-		resources :comments 
-	end
-	
+  get 'business'   => 'pages#business'
+  resources :users
+  resources :listings,          only: [:create, :destroy, :show]
+  resources :tags, only: [:index, :show], path: 't'
+  resources :posts do
+    resources :comments
+  end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

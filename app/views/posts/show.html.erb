@@ -1,39 +1,39 @@
 <div class="postshow">
-<div class="container">
-<div class="col-xs-12 col-md-8">
-	<div class="showbox">
-		<h1><%= @post.title %></h1>
-		<p class="postc"><%= @post.content %></p>
-	</div>
-</div>
-<div class="col-xs-6 col-lg-4">
-	<div class="commentbox">
-	<div class="cbox">
-		<% @post.comments.each do |comment| %>
-  		<p><b><%= comment.user.name %></b></p>
-			<p><%= comment.content %></p>
-			<span class="timestamp">
-    	<%= (comment.created_at.strftime("%Y-%m-%d")) %>
-    	<% if logged_in? %>
-    	<% if current_user?(comment.user) || current_user.admin? %>
-      <%= link_to "삭제", [comment.post, comment], method: :delete,
+  <div class="container">
+    <div class="col-xs-12 col-md-8">
+      <div class="showbox">
+        <h1><%= @post.title %></h1>
+        <p class="postc"><%= @post.content %></p>
+      </div>
+    </div>
+    <div class="col-xs-6 col-lg-4">
+      <div class="commentbox">
+        <div class="cbox">
+          <% @post.comments.each do |comment| %>
+            <p><b><%= comment.user.name %></b></p>
+            <p><%= comment.content %></p>
+            <span class="timestamp">
+              <%= (comment.created_at.strftime("%Y-%m-%d")) %>
+              <% if logged_in? %>
+                <% if current_user?(comment.user) || current_user.admin? %>
+                  <%= link_to "삭제", [comment.post, comment], method: :delete,
                                        data: { confirm: "확실 해요?" } %>
-    	<% end %>
-    	<% end %>
-  </span>
-			<div class="gline"></div>
-		<% end %>
-	</div>
-		<%= form_for([@post, Comment.new]) do |f| %>
-  		<div class="field">
-    		<%= f.label :content, "댓글", class: "fieldlabel" %><br>
-    		<%= f.text_area :content %>
-    		<%= hidden_field_tag :user_id, params[:user_id] %>
-    		<%= hidden_field_tag :post_id, params[:id] %>
-  		</div>
-  		<%= f.submit "댓글 달기", class: "btn btn-primary" %>
-		<% end %>
-	</div>
-</div>
-</div>
+                <% end %>
+              <% end %>
+            </span>
+            <div class="gline"></div>
+          <% end %>
+        </div>
+        <%= form_for([@post, Comment.new]) do |f| %>
+          <div class="field">
+            <%= f.label :content, "댓글", class: "fieldlabel" %><br>
+            <%= f.text_area :content %>
+            <%= hidden_field_tag :user_id, params[:user_id] %>
+            <%= hidden_field_tag :post_id, params[:id] %>
+          </div>
+          <%= f.submit "댓글 달기", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,9 +1,9 @@
- <% if @product_items.any? %>
- <% @product_items.each do |image| %>
-  <ol class="listings">
-		<div class="thumbnail"><%= render image %></div>
-  </ol>
-	<% end %>
-	<div class="blankets"></div>
-	<div class="center"><%= will_paginate @product_items, previous_label: "<", next_label: ">" %></div>
+<% if @product_items.any? %>
+  <% @product_items.each do |image| %>
+    <ol class="listings">
+      <div class="thumbnail"><%= render image %></div>
+    </ol>
+  <% end %>
+  <div class="blankets"></div>
+  <div class="center"><%= will_paginate @product_items, previous_label: "<", next_label: ">" %></div>
 <% end %>
