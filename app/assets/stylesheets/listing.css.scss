@@ -20,6 +20,8 @@ textarea {
       @include span-columns(4);
       margin-left: 0px;
       margin-top: 0px;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     .fields {
       border-radius: 1.5px;
