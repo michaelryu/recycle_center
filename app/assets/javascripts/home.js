@@ -7,7 +7,7 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // 마커가 표시될 위치입니다
-var markerPosition  = new daum.maps.LatLng(33.450701, 126.570667); 
+var markerPosition  = new daum.maps.LatLng(36.357537, 127.32399); 
 
 // 마커를 생성합니다
 var marker = new daum.maps.Marker({
