@@ -40,7 +40,7 @@ header.navigation {
   // Mobile view
 
   .navigation-menu-button {
-    color: $navigation-color;
+    color: $green;
     display: block;
     float: right;
     font-family: $sans-serif;
@@ -55,7 +55,7 @@ header.navigation {
     }
 
     &:hover {
-      color: $navigation-color-hover;
+      color: $green;
     }
   }
 
