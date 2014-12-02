@@ -207,8 +207,8 @@ textarea {
     }
     .comments {
       @include media($mobile) {
-        padding-left: 1em;
-        padding-right: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
       }
       border: 1px solid $green;
       margin-bottom: 0.6em;
