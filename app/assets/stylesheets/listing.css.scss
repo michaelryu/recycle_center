@@ -100,9 +100,7 @@ textarea {
 .listingshow {
   margin-top: 4em;
   @include outer-container;
-  aside {
-    padding-left: -2em;
-    padding-right: 2em;
+  aside {    
     @include span-columns(8);
     @include media($mobile) {
       @include span-columns(4);
