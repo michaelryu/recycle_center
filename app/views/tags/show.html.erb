@@ -1,6 +1,6 @@
-<h1 class='highlight'><%= @tag.name %></h1>
-<div class='lis'>
-  <div class='center'>
+<section class="listing">
+  <h1><%= @tag.name %></h1>
+  <div class="lis">
     <% if @listings.any? %>
       <% @listings.each do |posts| %>
         <ol class='listings'>
@@ -9,4 +9,4 @@
       <% end %>
     <% end %>
   </div>
-</div>
+</section>

@@ -1,20 +1,20 @@
-<h1>로그인</h1>
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <%= form_for(:session, url: login_path) do |f| %>
-        <%= f.label :email, "이메일", class: "fieldlabel" %>
-        <%= f.text_field :email, class: 'form-control' %>
-        <%= f.label :password, "비밀번호", class: "fieldlabel" %>
-        <%= f.password_field :password, class: 'form-control' %>
-        <%= f.label :remember_me, class: "checkbox inline" do %>
-          <%= f.check_box :remember_me %>
-          <span>보안접속</span>
-        <% end %>
-        <%= f.submit "로그인", class: "btn btn-primary" %>
+<section class="session">
+  <aside>
+    <h1>로그인</h1>
+    <p>아직 회원이 아니신가요?
+      <%= link_to "회원가입", signup_path %></p>
+  </aside>
+  <article>
+    <%= form_for(:session, url: login_path) do |f| %>
+      <%= f.label :email, "이메일" %>
+      <%= f.text_field :email, class: "signarea" %>
+      <%= f.label :password, "비밀번호" %>
+      <%= f.password_field :password, class: "signarea" %>
+      <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me %>
+        <span>보안접속</span>
       <% end %>
-      <p>아직 회원이 아니신가요?
-        <%= link_to "회원가입", signup_path %></p>
-    </div>
-  </div>
-</div>
+      <%= f.submit "로그인", class: "signinbutton" %>
+    <% end %>
+  </article>
+</section>

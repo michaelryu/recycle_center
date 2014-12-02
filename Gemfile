@@ -22,6 +22,11 @@ gem 'sdoc',                    '0.4.0', group: :doc
 gem 'acts-as-taggable-on',     '3.4'
 gem 'htmlbeautifier'
 gem 'ruby-beautify'
+gem 'bourbon',                 '4.0.2'
+gem 'neat',                    '1.7.0'
+gem 'bitters'
+gem 'refills',                 '0.0.2'
+gem 'normalize-rails',         '3.0.1'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

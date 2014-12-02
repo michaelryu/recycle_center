@@ -22,7 +22,7 @@ class PostsController < ApplicationController
 		redirect_to request.referrer || announcement_path
 	end
 
-	pri	vate
+	private
 
 	def post_params
 		params.require(:post).permit(:title, :content)

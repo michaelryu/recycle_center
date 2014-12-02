@@ -1,34 +1,23 @@
-<div class="cover">
-  <div class="container">
-    <div class="center">
-      <p>대전 정부물품재활용센터</p>
-      <h1>가전제품, 사무용품, 업무용품, 가구</h1>
-      <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <h1>대전 정부물품재활용센터</h1>
+      <p>가전제품, 사무용품, 업무용품, 가구</p>
+      <h2>전화: 042) 524-8887</h2>
     </div>
   </div>
 </div>
-<div class="covertwo">
-  <div class="container">
-    <h1>이용안내</h1>
-    <p>우리 정부물품 재활용센타에서는 대전광역시 충청남도 충처북도 지역에 있는
-      <b>정부 각 기관</b>에서 사용하던 재사용 가능한 중고 물품과
-      <b>지역주민</b>이 사용하던 재활용 가능한 물품을 무상으로 수리. 수선하여 이를 필요로 하는 시민에게 저렴한
-      <b>가격으로 판매</b>하고 있습니다. 사용 가능한 물품을 배출하실 경우, 전화연락 주시면 방문하여 무료로 수거 해 드리겠습니다. 아울러
-      <b>폐업시 고가 현금매입</b>
-      가능하며 전화주시면 최대한 빨리 처리해 드리겠습니다.</p>
-    <p>수거품목: 가전, 가구, 사무용품, 업소용품, 도서, 의류, 의료기, 기타, 잡화류등 (남이 다시 쓸수없는 재품 제외)</p>
-  </div>
+<div class="intro-text">
+  <h4>우리 정부물품 재활용센타에서는</h4>
+  <p>대전광역시 충청남도 충처북도 지역에 있는
+    <b>정부 각 기관</b>에서 사용하던 재사용 가능한 중고 물품과
+    <b>지역주민</b>이 사용하던 재활용 가능한 물품을 무상으로 수리. 수선하여 이를 필요로 하는 시민에게 저렴한
+    <b>가격으로 판매</b>하고 있습니다. 사용 가능한 물품을 배출하실 경우, 전화연락 주시면 방문하여 무료로 수거 해 드리겠습니다. 아울러
+    <b>폐업시 고가 현금매입</b>
+    가능하며 전화주시면 최대한 빨리 처리해 드리겠습니다.수거품목: 가전, 가구, 사무용품, 업소용품, 도서, 의류, 의료기, 기타, 잡화류등 (남이 다시 쓸수없는 재품 제외)</p>
 </div>
-<div class="coverthree">
-  <div class="col-xs-12 col-md-8">
-    <%= image_tag "map.png", class: "maps" %>
-  </div>
-  <div class="col-xs-6 col-md-4">
-    <h1 class="three">전화: 042) 524-8887</h1>
-    <h1>팩스: 042) 535-5872</h1>
-    <h1>이용시간: 09:00 ~ 19:00</h1>
-    <p class="center">대전시 유성구 구암동 419-12번지
-    </p>
-    <p class="center">대전 광역시 유성구 현충언로 480번길 46</p>
-  </div>
-</div>
+<% if 5 > 10 %>
+  <%= image_tag "map.png", class: "maps" %>
+<% end %>
+<div id="map" style="width:80%;height:350px;"></div>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=6fb1ad94a89cc611018e86660e432c2d2ce16f4b"></script>

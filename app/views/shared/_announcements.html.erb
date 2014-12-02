@@ -2,5 +2,5 @@
   <ol class="post">
     <%= render @announcements %>
   </ol>
-  <div class="center"><%= will_paginate @announcements, previous_label: "<", next_label: ">" %></div>
+  <%= will_paginate @announcements, previous_label: "<", next_label: ">" %>
 <% end %>

@@ -1,0 +1,214 @@
+textarea {
+  border-radius: 1.5px;
+  &:focus {
+    border-color: $green;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06) inset, 0px 0px 5px rgba(78, 192, 55, 0.7);
+  }
+}
+.listing {
+  h1 {
+    color: $green;
+    text-align: center;
+    margin-bottom: -1em;
+  }
+  @include outer-container;
+  margin-top: 2em;
+  .form {
+    @include span-columns(6);
+    @include shift(3);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    .fields {
+      border-radius: 1.5px;
+      &:focus {
+        border-color: $green;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06) inset, 0px 0px 5px rgba(78, 192, 55, 0.7);
+      } 
+    }
+    .button {
+      float: right;
+      margin-top: -2em;
+      background-color: $green;
+    }
+    .button2 {
+      float: right;
+      background-color: $green;
+    }
+  }
+  .lis {    
+    margin-top: 2em;
+    .listings {
+      margin-top: 2em;
+      @include span-columns(4);
+      @include omega(3n);
+
+      display: inline-block;
+      list-style: none;
+      border: 1px solid $green;
+      a {
+        color: $green;
+      }
+
+      .title, .deletebox {
+        text-align: center;
+      }
+      .title {
+        padding: 1em;
+        font-weight: bold;
+      }
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .pos {
+    margin-top: 2em;
+    @include span-columns(7);
+    @include shift(2.5);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    .post {
+      li {
+        border: 1px solid $green;
+        margin-bottom: 2em;
+      }
+      .title {
+          padding: 2em;
+          text-align: center;
+          font-weight: 700;
+          a { color: $green; }
+        }
+        .content {
+          display: block;
+          padding: 0 3em 1em 3em;
+          white-space: pre-wrap;
+        }
+
+        .timestamp {
+          margin-left: 65%;
+          padding-bottom: 2em;
+          a { margin-left: 0.5em; color: $green }
+        }
+    } 
+  }
+}
+.listingshow {
+  margin-top: 4em;
+  @include outer-container;
+  aside {
+    padding-left: -2em;
+    padding-right: 2em;
+    @include span-columns(8);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  article {
+    border: 1px solid $green;
+    @include span-columns(4);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    h1 {
+      color: $green;
+      text-align: center;
+      padding: 1em;
+      border-bottom: 1px solid $green;
+    }
+    p {
+      color: $green;
+      white-space: pre-wrap;
+      padding: 2em 1.5em 1.5em 1.5em;
+      font-weight: 500;
+      line-height: 1.8;
+    }
+    .spec {
+      text-align: center;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+      border-bottom: 1px solid $green;
+
+      h2 {
+        display: inline-block;
+        font-size: 1em;
+        color: $green;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.postshow {
+  margin-top: 4em;
+  @include outer-container;
+  aside {
+    border: 1px solid $green;
+    @include span-columns(8);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    h1 {
+      color: $green;
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-weight: 600;
+    }
+    p {
+      display: block;
+      padding: 0 4em 3em 4em;
+      white-space: pre-wrap;
+      line-height: 1.8;
+    }
+  }
+  article {
+    @include span-columns(4);
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    input {
+      float: right;
+      background-color: $green;
+    }
+    h3 {
+      font-size: 1em;
+      color: $green;
+      margin-top: 3em;
+      text-align: center;
+      font-weight: 400;
+    }
+    .comments {
+      border: 1px solid $green;
+      margin-bottom: 0.6em;
+      .timestamp {
+        float: right;
+        margin-top: -3em;
+        margin-right: 1em;
+        color: $green;
+      }
+      p {
+        white-space: pre-wrap;
+        font-size: 0.95em;
+        padding: 0 2em 3em 2em;
+        font-weight: 300;
+        line-height: 1.6;
+      }
+      h2 {
+        font-size: 1.2em;
+        color: $green;
+        padding: 2em 0 1em 2em;
+      }
+    }
+  }
+}
