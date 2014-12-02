@@ -107,15 +107,13 @@ textarea {
   }
 }
 .listingshow {
-  margin-top: 4em;
   @include outer-container;
   aside {    
+    margin-top: 4em;
     @include span-columns(8);
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 0px;
-      padding-top: 0px;
-      margin-bottom: 1em;
     }
     img {
       width: 100%;
@@ -123,10 +121,12 @@ textarea {
     }
   }
   article {
+    margin-top: 4em;
     border: 1px solid $green;
     @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
+      margin-top: 0px;
     }
     h1 {
       color: $green;
@@ -160,16 +160,14 @@ textarea {
 }
 
 .postshow {
-  margin-top: 4em;
   @include outer-container;
   aside {
+    margin-top: 4em;
     border: 1px solid $green;
     @include span-columns(8);
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 0px;
-      padding-top: 0px;
-      margin-bottom: 1em;
     }
     h1 {
       color: $green;
@@ -186,9 +184,11 @@ textarea {
     }
   }
   article {
+    margin-top: 4em;
     @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
+      margin-top: 2em;
     }
     input {
       float: right;
