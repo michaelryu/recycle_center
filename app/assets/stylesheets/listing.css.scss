@@ -72,6 +72,7 @@ textarea {
     @include shift(3);
     @include media($mobile) {
       @include span-columns(4);
+      margin-left: 0px;
     }
     .post {
       li {
@@ -79,6 +80,7 @@ textarea {
         margin-bottom: 2em;
         @include media($mobile) {
          @include span-columns(4);
+         margin-left: 0px;
         }
       }
       .title {
