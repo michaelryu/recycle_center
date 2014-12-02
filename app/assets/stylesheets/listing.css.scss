@@ -206,6 +206,10 @@ textarea {
       font-weight: 400;
     }
     .comments {
+      @include media($mobile) {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
       border: 1px solid $green;
       margin-bottom: 0.6em;
       .timestamp {
