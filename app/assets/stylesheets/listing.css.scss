@@ -78,14 +78,7 @@ textarea {
             padding: 0;
             margin: 0;
             @include span-columns(4);
-            h1 { a { font-size: 3px; } }
-            p { font-size: 0px; padding: 0; margin: 0;}
-            .more {
-              width: 100%;
-              margin-top: 0;
-              padding: 0;
-              a { font-size: 0px; }
-            }
+            h1 { a { font-size: 12px; margin-bottom: 1em; } }
           }
           h1 {
             opacity: 0;
