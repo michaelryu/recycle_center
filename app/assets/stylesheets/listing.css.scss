@@ -78,12 +78,13 @@ textarea {
             padding: 0;
             margin: 0;
             @include span-columns(4);
-            h1 { font-size: 6px; }
+            h1 { font-size: 3px; }
+            p { font-size: 0; padding: 0; margin: 0;}
             .more {
               width: 100%;
               margin-top: 0;
               padding: 0;
-              a { font-size: 4px; }
+              a { font-size: 2px; }
             }
           }
           h1 {
