@@ -78,7 +78,8 @@ textarea {
             padding: 0;
             margin: 0;
             @include span-columns(4);
-            h1 { a { font-size: 12px; margin-bottom: 1em; } }
+            h1 { a { font-size: 16px; margin-bottom: 4em; } }
+            p { font-size: 12px; margin-right: -4px;}
           }
           h1 {
             opacity: 0;
