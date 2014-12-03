@@ -74,6 +74,12 @@ textarea {
           position: absolute;
           top: 0; left: 0; bottom: 0; right: 0;
           width: 80%;
+          @include media($mobile) {
+            padding: 0;
+            @include span-columns(4);
+            h1 { font-size: 16px;}
+            .more { a { font-size: 12px; } }
+          }
           h1 {
             opacity: 0;
             font-size: 2em;
