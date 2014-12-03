@@ -9,5 +9,6 @@ class TagsController < ApplicationController
 	def show
 		@tag =  ActsAsTaggableOn::Tag.find(params[:id])
 		@listings = Listing.tagged_with(@tag.name)
+		@listing = Listing.find(params[:id])
 	end
 end

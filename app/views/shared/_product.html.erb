@@ -1,8 +1,8 @@
 <% if @product_items.any? %>
-  <% @product_items.each do |card| %>
-    <ol class="listings">
+  <ol class="listings">
+    <% @product_items.each do |card| %>
       <%= render card %>
-    </ol>
-  <% end %>
+    <% end %>
+  </ol>
   <%= will_paginate @product_items, previous_label: "<", next_label: ">" %>
 <% end %>

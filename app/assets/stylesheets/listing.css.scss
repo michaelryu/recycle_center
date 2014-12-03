@@ -9,7 +9,6 @@ textarea {
   h1 {
     color: $green;
     text-align: center;
-    margin-bottom: -1em;
     margin-top: 1em;
   }
   @include outer-container;
@@ -45,29 +44,94 @@ textarea {
   .lis {    
     margin-top: 2em;
     .listings {
-      margin-top: 2em;
-      @include span-columns(4);
-      @include omega(3n);
-
-      display: inline-block;
       list-style: none;
-      border: 1px solid $green;
-      a {
-        color: $green;
-      }
-
-      .title, .deletebox {
+      li {
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        @include span-columns(4);
+        @include omega(3n);
+        margin-bottom: 1.5em;
         text-align: center;
-      }
-      .title {
-        padding: 1em;
-        font-weight: bold;
-      }
-      img {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 100%;
+        img {
+          transition: all 0.25s ease-in-out;
+          -moz-transition: all 0.25s ease-in-out;
+          -webkit-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          display: block;
+          width: 100%;
+        }
+        .overlay {
+          transition: all 0.25s ease-in-out;
+          -moz-transition: all 0.25s ease-in-out;
+          -webkit-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          line-height: 0;
+        }
+        .detail {
+          margin: 10%;
+          padding: 3em;
+          position: absolute;
+          top: 0; left: 0; bottom: 0; right: 0;
+          width: 80%;
+          h1 {
+            opacity: 0;
+            font-size: 2em;
+            transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            a { color: white; }
+          }
+          p {
+            padding-top: 0.5em;
+            margin-left: -0.5em;
+            opacity: 0;
+            font-size: 1.5em;
+            color: white;
+            transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+          }
+          .more {
+            @extend button;
+            margin-top: 0.5em;
+            padding-left: 2em;
+            padding-right: 2em;
+            a { color: white; font-size: 1.2em; }
+            background-color: transparent;
+            border: 1px solid white;
+            opacity: 0;
+            transition: all 0.25s ease-in-out;
+            -moz-transition: all 0.25s ease-in-out;
+            -webkit-transition: all 0.25s ease-in-out;
+            -o-transition: all 0.25s ease-in-out;
+            &:hover { background-color: transparent; border: 2px solid white; }
+          }
+          p.body, p.intro {
+            color: black;
+            font-size: 1em;
+          }
+        }
+        &:hover {
+          img {
+            opacity: 0.7;
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            -moz-filter: blur(4px);
+            -o-filter: blur(4px);
+            -ms-filter: blur(4px);
+          }
+          .overlay {
+            background-color: black;
+          }
+          h1 {
+            opacity: 1;     
+          }
+          p { opacity: 1;}
+          .more { opacity: 1;}
+        }
       }
     }
   }
@@ -229,3 +293,4 @@ textarea {
     }
   }
 }
+

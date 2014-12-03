@@ -2,11 +2,11 @@
   <h1><%= @tag.name %></h1>
   <div class="lis">
     <% if @listings.any? %>
-      <% @listings.each do |posts| %>
-        <ol class='listings'>
-          <div class='thumbnail'><%= render posts %></div>
-        </ol>
-      <% end %>
+      <ol class='listings'>
+        <% @listings.each do |card| %>
+          <%= render card %>
+        <% end %>
+      </ol>
     <% end %>
   </div>
 </section>
