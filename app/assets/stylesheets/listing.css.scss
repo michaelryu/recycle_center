@@ -89,7 +89,7 @@ textarea {
           @include span-columns(4);
           h1 {
             opacity: 1;
-            a { font-size: 14px; margin-bottom: 4em; }
+            a { font-size: 16px; padding-top: 2em; }
           }
           p { display: none; }
           .more { display: none; }
@@ -170,6 +170,8 @@ textarea {
       @include span-columns(4);
       margin-left: 0px;
       margin-top: 0px;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     .post {
       li {
@@ -229,7 +231,9 @@ textarea {
     @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
-      margin-top: 0px;
+      margin-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     h1 {
       padding: 0 0 1em 0.2em;
@@ -268,7 +272,10 @@ textarea {
   section {
     @include media($mobile) {
       @include span-columns(4);
-      margin-top: 0px;
+      h1 { margin-top: 0.8em;}
+      p { padding-top: 1em;}
+      padding-left: 1em;
+      padding-right: 1em;
     }
     h1 {
       margin-top: 2.5em;
@@ -293,6 +300,8 @@ textarea {
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
     }
     input {
       float: right;

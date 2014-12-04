@@ -102,4 +102,8 @@ $green: #4caf50;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
+  @include media($mobile) {
+    height: 300px;
+  }
 }
+
