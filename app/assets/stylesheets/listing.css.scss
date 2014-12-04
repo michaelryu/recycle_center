@@ -89,10 +89,9 @@ textarea {
           @include span-columns(4);
           h1 {
             opacity: 1;
-            a { font-size: 18px; padding-top: 6em; }
+            a { font-size: 18px; margin-top: 2em; }
           }
           p { display: none; }
-          .more { display: none; }
           span { display: none; }
         }
         h1 {
