@@ -88,16 +88,16 @@ textarea {
           margin: 0;
           @include span-columns(4);
           h1 {
-            margin-top: 3em;
+            margin-top: 10px;
             opacity: 1;
             a { font-size: 18px; margin-top: 2em; }
           }
           p { display: none; }
           span { display: none; }
           .more {
-            padding-left: 1em;
-            padding-right: 1em;
-            a { font-size: 12; }
+            padding-left: 0;
+            padding-right: 0;
+            a { font-size: 12px; }
         }
         }
         h1 {
