@@ -26,10 +26,14 @@ $green: #4caf50;
 			float: right;
 			margin-top: -1.6em;
 			background-color: $green;
+      font-family: 'Nanum Gothic Coding', $serif;
+      &:hover { background-color: #388e3c;}
 		}
     .signupbutton {
       float: right;
       background-color: $green;
+      font-family: 'Nanum Gothic Coding', $serif;
+      &:hover { background-color: #388e3c;}
     }
     .signarea {
       border-radius: 1.5px; 
@@ -48,5 +52,6 @@ $green: #4caf50;
 }
 
 label {
-      color: $green;
+  font-family: 'Nanum Gothic Coding', $serif;
+  color: $green;
 }

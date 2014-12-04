@@ -4,11 +4,11 @@
   </aside>
   <article>
     <h1><%= @listing.title %></h1>
+    <h3><%= @listing.created_at.strftime("%Y-%m-%d") %></h3>
+    <p><%= @listing.detail %></p>
     <div class="spec">
       <h2><%= @listing.tag_list %>,</h2>
       <h2><%= @listing.realprice %>,</h2>
-      <h2><%= @listing.created_at.strftime("%Y-%m-%d") %></h2>
     </div>
-    <p><%= @listing.detail %></p>
   </article>
 </section>

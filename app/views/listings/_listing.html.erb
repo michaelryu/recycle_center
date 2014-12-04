@@ -3,10 +3,10 @@
   <div class="detail">
     <h1><%= link_to listing.title, listing %></h1>
     <p><%= listing.realprice %></p>
-    <% if current_user?(listing.user) && current_user.admin? %>
-      <%= link_to "삭제", listing, method: :delete,
-                                       data: { confirm: "확실 해요?" } %>
-    <% end %>
     <div class="more"><%= link_to "자세히", listing %></div>
+    <% if current_user?(listing.user) && current_user.admin? %>
+      <span><%= link_to "삭제", listing, method: :delete,
+                                       data: { confirm: "확실 해요?" } %></span>
+    <% end %>
   </div>
 </li>

@@ -1,12 +1,11 @@
 <section class="listing">
   <h1><%= @tag.name %></h1>
-  <div class="lis">
-    <% if @listings.any? %>
-      <ol class='listings'>
-        <% @listings.each do |card| %>
-          <%= render card %>
-        <% end %>
-      </ol>
-    <% end %>
-  </div>
+  <% if @listings.any? %>
+    <ol class='listings'>
+      <% @listings.each do |card| %>
+        <%= render card %>
+      <% end %>
+    </ol>
+  <% end %>
 </section>
+<div class="paginate"><%= will_paginate @listings, previous_label: "<", next_label: ">" %></div>

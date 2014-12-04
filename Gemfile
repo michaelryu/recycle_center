@@ -25,6 +25,9 @@ gem 'neat',                    '1.7.0'
 gem 'bitters'
 gem 'refills',                 '0.0.2'
 gem 'normalize-rails',         '3.0.1'
+gem 'nokogiri',                '1.6.5'
+gem 'htmlentities',            '4.3.2'
+gem 'nokogiri_truncate_html',  '0.0.4'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

@@ -1,28 +1,20 @@
 <section class="postshow">
-  <aside>
+  <section>
     <h1><%= @post.title %></h1>
+    <span class="date"><%= @post.created_at.strftime("%Y-%m-%d") %></span>
     <p><%= @post.content %></p>
-  </aside>
+  </section>
   <article>
+    <% if @post.comments.any? %>
+      <p>댓글</p>
+    <% end %>
     <% @post.comments.each do |comment| %>
-      <div class="comments">
-        <h2><%= comment.user.name %></h2>
-        <p><%= comment.content %></p>
-        <span class="timestamp">
-          <%= (comment.created_at.strftime("%Y-%m-%d")) %>
-          <% if logged_in? %>
-            <% if current_user?(comment.user) || current_user.admin? %>
-              <%= link_to "삭제", [comment.post, comment], method: :delete,
-                                       data: { confirm: "확실 해요?" } %>
-            <% end %>
-          <% end %>
-        </span>
-      </div>
+      <%= render comment %>
     <% end %>
     <% if logged_in? %>
       <%= render 'shared/comment_form' %>
     <% else %>
-      <h3>코멘트를 남기시려면
+      <h3>댓글 남기시려면
         <%= link_to "로그인", login_path %>을 하셔야 합니다</h3>
     <% end %>
   </article>

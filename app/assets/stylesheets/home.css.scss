@@ -68,9 +68,10 @@ $green: #4caf50;
   text-align: center;
 
   h4 {
+    font-family: 'Nanum Gothic Coding', $serif;
     color: $green;
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.4em;
     margin: 0 auto 1em;
 
@@ -85,21 +86,20 @@ $green: #4caf50;
   p {
     margin: auto;
     margin-bottom: - 1em;
+    text-align: left;
 
     @include media($large-screen) {
-      width: $intro-text-width;
+      width: 70%;
       line-height: 2;
-      color: $green;
       font-size: 1.4em;
       font-weight: 300;
     }
   }
 }
 
-img {
-   width: 80%;
-   display: block;
-   margin-right: auto;
-   margin-left: auto;
+#map {
+  height: 600px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 }
-

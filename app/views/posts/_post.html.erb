@@ -1,8 +1,11 @@
 <li id="post-<%= post.id %>">
   <div class="center title"><%= link_to post.title, post %></div>
-  <span class="content"><%= post.content %></span>
+  <span class="date"><%= post.created_at.strftime("%Y-%m-%d") %></span>
+  <p><%= truncate_html post.content, length: 350 %>
+    <% if post.content.length > 350 %>
+      <%= link_to "더보기", post %></p>
+  <% end %>
   <div class="timestamp">
-    <%= post.created_at.strftime("%Y-%m-%d") %>
     <%= link_to "댓글 보기", post %>
     <% if current_user?(post.user) && current_user.admin? %>
       <%= link_to "삭제", post, method: :delete,

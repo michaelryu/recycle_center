@@ -5,20 +5,26 @@ textarea {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06) inset, 0px 0px 5px rgba(78, 192, 55, 0.7);
   }
 }
+.paginate {
+  text-align: center;
+  
+}
 .listing {
+  margin-top: 2em;
   h1 {
     color: $green;
     text-align: center;
-    margin-top: 1em;
+    margin: 1em;
   }
   @include outer-container;
   .form {
+    display: block;
+    margin: 1.5em;
     @include span-columns(7);
     @include shift(2.5);
     @include media($mobile) {
       @include span-columns(4);
-      margin-left: 0px;
-      margin-top: 0px;
+      margin: 0;
       padding-left: 1em;
       padding-right: 1em;
     }
@@ -34,113 +40,132 @@ textarea {
       margin-top: -2em;
       margin-bottom: 1em;
       background-color: $green;
+      font-family: 'Nanum Gothic Coding', $serif;
+      &:hover { background-color: #388e3c;}
     }
     .button2 {
       float: right;
       margin-bottom: 1em;
       background-color: $green;
+      font-family: 'Nanum Gothic Coding', $serif;
+      &:hover { background-color: #388e3c;}
     }
   }
-  .lis {    
-    margin-top: 2em;
-    .listings {
-      list-style: none;
-      li {
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        @include span-columns(4);
-        @include omega(3n);
-        margin-bottom: 1.5em;
-        text-align: center;
-        img {
-          transition: all 0.25s ease-in-out;
-          -moz-transition: all 0.25s ease-in-out;
-          -webkit-transition: all 0.25s ease-in-out;
-          -o-transition: all 0.25s ease-in-out;
+  
+  .listings {
+    list-style: none;
+    li {
+      overflow: hidden;
+      position: relative;
+      display: inline-block;
+      @include span-columns(4);
+      @include omega(3n);
+      margin-bottom: 1.5em;
+      text-align: center;
+      img {
+        transition: all 0.45s ease-in-out;
+        -moz-transition: all 0.45s ease-in-out;
+        -webkit-transition: all 0.45s ease-in-out;
+        -o-transition: all 0.45s ease-in-out;
+        display: block;
+        width: 100%;
+      }
+      .overlay {
+        transition: all 0.45s ease-in-out;
+        -moz-transition: all 0.45s ease-in-out;
+        -webkit-transition: all 0.45s ease-in-out;
+        -o-transition: all 0.45s ease-in-out;
+        line-height: 0;
+      }
+      .detail {
+        margin: 10%;
+        padding: 3em;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: 80%;
+        @include media($mobile) {
+          padding: 0;
+          margin: 0;
+          @include span-columns(4);
+          h1 {
+            opacity: 1;
+            a { font-size: 14px; margin-bottom: 4em; }
+          }
+          p { display: none; }
+          .more { display: none; }
+          span { display: none; }
+        }
+        h1 {
+          margin: 0;
+          opacity: 0;
+          font-size: 2em;
+          transition: all 0.45s ease-in-out;
+          -moz-transition: all 0.45s ease-in-out;
+          -webkit-transition: all 0.45s ease-in-out;
+          -o-transition: all 0.45s ease-in-out;
+          a { color: white; }
+        }
+        p {
+          padding-top: 0.5em;
+          margin-left: -0.2em;
+          opacity: 0;
+          font-size: 1.5em;
+          color: white;
+          transition: all 0.45s ease-in-out;
+          -moz-transition: all 0.45s ease-in-out;
+          -webkit-transition: all 0.45s ease-in-out;
+          -o-transition: all 0.45s ease-in-out;
+        }
+        .more {
+          @extend button;
+          margin-top: 0.5em;
+          padding-left: 2em;
+          padding-right: 2em;
+          a { color: white; font-size: 1.2em; font-family: 'Nanum Gothic Coding', $serif; }
+          background-color: transparent;
+          border: 1px solid white;
+          opacity: 0;
+          transition: all 0.45s ease-in-out;
+          -moz-transition: all 0.45s ease-in-out;
+          -webkit-transition: all 0.45s ease-in-out;
+          -o-transition: all 0.45s ease-in-out;
+          &:hover { background-color: transparent; border: 2px solid white; }
+        }
+        span {
+          transition: all 0.45s ease-in-out;
+          -moz-transition: all 0.45s ease-in-out;
+          -webkit-transition: all 0.45s ease-in-out;
+          -o-transition: all 0.45s ease-in-out;
+          opacity: 0;
           display: block;
-          width: 100%;
+          margin-top: 1em;
+          a { color: white; }
+        }
+      }
+      &:hover {
+        img {
+          opacity: 0.7;
+          filter: blur(4px);
+          -webkit-filter: blur(4px);
+          -moz-filter: blur(4px);
+          -o-filter: blur(4px);
+          -ms-filter: blur(4px);
         }
         .overlay {
-          transition: all 0.25s ease-in-out;
-          -moz-transition: all 0.25s ease-in-out;
-          -webkit-transition: all 0.25s ease-in-out;
-          -o-transition: all 0.25s ease-in-out;
-          line-height: 0;
+          background-color: black;
         }
-        .detail {
-          margin: 10%;
-          padding: 3em;
-          position: absolute;
-          top: 0; left: 0; bottom: 0; right: 0;
-          width: 80%;
-          @include media($mobile) {
-            padding: 0;
-            margin: 0;
-            @include span-columns(4);
-            h1 { a { font-size: 16px; margin-bottom: 4em; } }
-            p { font-size: 2px; margin-right: -4px;}
-          }
-          h1 {
-            opacity: 0;
-            font-size: 2em;
-            transition: all 0.25s ease-in-out;
-            -moz-transition: all 0.25s ease-in-out;
-            -webkit-transition: all 0.25s ease-in-out;
-            -o-transition: all 0.25s ease-in-out;
-            a { color: white; }
-          }
-          p {
-            padding-top: 0.5em;
-            margin-left: -0.5em;
-            opacity: 0;
-            font-size: 1.5em;
-            color: white;
-            transition: all 0.25s ease-in-out;
-            -moz-transition: all 0.25s ease-in-out;
-            -webkit-transition: all 0.25s ease-in-out;
-            -o-transition: all 0.25s ease-in-out;
-          }
-          .more {
-            @extend button;
-            margin-top: 0.5em;
-            padding-left: 2em;
-            padding-right: 2em;
-            a { color: white; font-size: 1.2em; }
-            background-color: transparent;
-            border: 1px solid white;
-            opacity: 0;
-            transition: all 0.25s ease-in-out;
-            -moz-transition: all 0.25s ease-in-out;
-            -webkit-transition: all 0.25s ease-in-out;
-            -o-transition: all 0.25s ease-in-out;
-            &:hover { background-color: transparent; border: 2px solid white; }
-          }
+        h1 {
+          opacity: 1;     
         }
-        &:hover {
-          img {
-            opacity: 0.7;
-            filter: blur(4px);
-            -webkit-filter: blur(4px);
-            -moz-filter: blur(4px);
-            -o-filter: blur(4px);
-            -ms-filter: blur(4px);
-          }
-          .overlay {
-            background-color: black;
-          }
-          h1 {
-            opacity: 1;     
-          }
-          p { opacity: 1;}
-          .more { opacity: 1;}
-        }
+        p { opacity: 1;}
+        .more { opacity: 1;}
+        span { opacity: 1;}
       }
     }
   }
+  
   .pos {
-    @include span-columns(6);
-    @include shift(3);
+    @include span-columns(12);
     @include media($mobile) {
       @include span-columns(4);
       margin-left: 0px;
@@ -148,37 +173,45 @@ textarea {
     }
     .post {
       li {
-        border: 1px solid $green;
-        margin-bottom: 2em;
-        margin-top: 2em;
+        margin-top: 4em;
         @include media($mobile) {
          @include span-columns(4);
          margin-left: 0px;
          margin-top: 0px;
         }
       }
+      .date {
+        color: transparentize($base-font-color, .6);
+        font: 900 1em 'Nanum Gothic Coding', $serif;
+      }
       .title {
-          padding: 2em;
-          text-align: center;
           font-weight: 700;
-          a { color: $green; }
+          margin-bottom: 1.5em;
+          a {
+            color: black;
+            font: 700 1.7em/1.8 'Nanum Gothic Coding', $serif;
+          }
         }
-        .content {
+        p {
+          padding-top: 0.6em;
           display: block;
-          padding: 0 3em 1em 3em;
-          white-space: pre-wrap;
+          font: 400 1.2em/1.8 Helvetica;
+          a { color: $green; font-size: 0.8em; }
         }
-
         .timestamp {
-          margin-left: 60%;
-          padding-bottom: 2em;
+          margin-right: 1em;
+          text-align: right;
+          padding-top: 2em;
           a { margin-left: 0.5em; color: $green }
         }
     } 
   }
 }
 .listingshow {
+  $sans-serif: 'Questrial', sans-serif;
+  $serif: 'Sanchez', serif;
   @include outer-container;
+  @include clearfix;
   aside {    
     margin-top: 4em;
     @include span-columns(8);
@@ -193,38 +226,38 @@ textarea {
   }
   article {
     margin-top: 4em;
-    border: 1px solid $green;
     @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 0px;
     }
     h1 {
+      padding: 0 0 1em 0.2em;
+      font-family: 'Nanum Gothic Coding', $serif;
       color: $green;
-      text-align: center;
-      padding: 1em;
-      border-bottom: 1px solid $green;
+    }
+    h3 {
+      padding-left: 0.5em;
+      color: transparentize($base-font-color, .6);
+      font: 900 1em 'Nanum Gothic Coding', $serif;
     }
     p {
-      color: $green;
+      font: 500 1em/1.8 Helvetica;
       white-space: pre-wrap;
-      padding: 2em 1.5em 1.5em 1.5em;
-      font-weight: 500;
-      line-height: 1.8;
+      padding: 1.3em 0 0 0.5em;
+      text-align: left;
     }
     .spec {
-      text-align: center;
       padding-top: 1.5em;
-      padding-bottom: 1.5em;
-      border-bottom: 1px solid $green;
-
+      float: right;
       h2 {
+        text-align: right;
+        font-style: italic;
+        font-size: 0.8em;
+        font-weight: 200;
         display: inline-block;
-        font-size: 1em;
-        color: $green;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        font-weight: 600;
       }
     }
   }
@@ -232,31 +265,31 @@ textarea {
 
 .postshow {
   @include outer-container;
-  aside {
-    margin-top: 4em;
-    border: 1px solid $green;
-    @include span-columns(8);
+  section {
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 0px;
     }
     h1 {
-      color: $green;
-      text-align: center;
-      padding-top: 1em;
-      padding-bottom: 1em;
+      margin-top: 2.5em;
+      margin-bottom: 0.5em;
+      font: 700 2em/1.8 'Nanum Gothic Coding', $serif;
       font-weight: 600;
     }
     p {
+      padding-top: 0.5em;
       display: block;
-      padding: 0 4em 3em 4em;
       white-space: pre-wrap;
       line-height: 1.8;
+      font-size: 1.15em;
+    }
+    .date {
+      color: transparentize($base-font-color, .6);
+      font: 900 1em 'Nanum Gothic Coding', $serif;
     }
   }
   article {
     margin-top: 4em;
-    @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
       margin-top: 2em;
@@ -264,6 +297,11 @@ textarea {
     input {
       float: right;
       background-color: $green;
+    }
+    p {
+      font-size: 2em;
+      color: $green;
+      padding-left: 1em;
     }
     h3 {
       font-size: 1em;
@@ -276,12 +314,19 @@ textarea {
       border: 1px solid $green;
       margin-bottom: 0.6em;
       .timestamp {
+        font-family: 'Nanum Gothic Coding', $serif;
         float: right;
         margin-top: -3em;
-        margin-right: 1em;
-        color: $green;
+        padding-right: 2em;
+        color: transparentize($base-font-color, .6);
+        a {
+          font-family: Helvetica;
+          padding-left: 0.5em;
+          color: $green;
+        }
       }
       p {
+        color: black;
         white-space: pre-wrap;
         font-size: 0.95em;
         padding: 0 2em 3em 2em;
@@ -289,7 +334,7 @@ textarea {
         line-height: 1.6;
       }
       h2 {
-        font-size: 1.2em;
+        font-size: 1em;
         color: $green;
         padding: 2em 0 1em 2em;
       }

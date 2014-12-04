@@ -1,0 +1,13 @@
+<div class="comments">
+  <h2><%= comment.user.name %></h2>
+  <p><%= comment.content %></p>
+  <span class="timestamp">
+    <%= (comment.created_at.strftime("%Y-%m-%d")) %>
+    <% if logged_in? %>
+      <% if current_user?(comment.user) || current_user.admin? %>
+        <%= link_to "삭제", [comment.post, comment], method: :delete,
+                                       data: { confirm: "확실 해요?" } %>
+      <% end %>
+    <% end %>
+  </span>
+</div>

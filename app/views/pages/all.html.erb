@@ -4,7 +4,6 @@
       <%= render 'shared/listing_form' %>
     </div>
   <% end %>
-  <div class="lis">
-    <%= render 'shared/product' %>
-  </div>
+  <%= render 'shared/product' %>
 </section>
+<div class="paginate"><%= will_paginate @product_items, previous_label: "<", next_label: ">" %></div>
