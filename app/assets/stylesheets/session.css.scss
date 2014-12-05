@@ -5,38 +5,42 @@ $green: #4caf50;
   @include outer-container;
   margin-top: 2em;
   aside {
-  	h1 {
-  		font-size: 2em;
-  		font-weight: 400;
-  		color: $green;
-  		margin-bottom: 0.5em;
-  	}
-  	p {
-  		font-size: 0.9em;
-  	}
-  	padding-left: 4em;
+    h1 {
+      font-size: 2em;
+      font-weight: 400;
+      color: $green;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 0.9em;
+    }
+    padding-left: 4em;
     @include span-columns(4);
     @include media($mobile) {
       @include span-columns(4);
     }
   }
   article {
-  	padding-right: 2em;
-		.signinbutton {
-			float: right;
-			margin-top: -1.6em;
-			background-color: $green;
-      font-family: 'Nanum Gothic Coding', $serif;
-      &:hover { background-color: #388e3c;}
-		}
+    padding-right: 2em;
+    .signinbutton {
+      float: right;
+      margin-top: -1.6em;
+      background-color: $green;
+      font-family: "Nanum Gothic Coding", $serif;
+      &:hover {
+        background-color: #388e3c;
+      }
+    }
     .signupbutton {
       float: right;
       background-color: $green;
-      font-family: 'Nanum Gothic Coding', $serif;
-      &:hover { background-color: #388e3c;}
+      font-family: "Nanum Gothic Coding", $serif;
+      &:hover {
+        background-color: #388e3c;
+      }
     }
     .signarea {
-      border-radius: 1.5px; 
+      border-radius: 1.5px;
       &:focus {
         border-color: $green;
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.06) inset, 0px 0px 5px rgba(78, 192, 55, 0.7);
@@ -52,6 +56,6 @@ $green: #4caf50;
 }
 
 label {
-  font-family: 'Nanum Gothic Coding', $serif;
+  font-family: "Nanum Gothic Coding", $serif;
   color: $green;
 }

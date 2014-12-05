@@ -3,10 +3,29 @@
   <div class="detail">
     <h1><%= link_to listing.title, listing %></h1>
     <p><%= listing.realprice %></p>
-    <div class="more"><%= link_to "자세히", listing %></div>
+    <div class="more">
+      <a href="#modal-text-<%= listing.id %>" title="자세히">자세히</a>
+    </div>
     <% if current_user?(listing.user) && current_user.admin? %>
       <span><%= link_to "삭제", listing, method: :delete,
                                        data: { confirm: "확실 해요?" } %></span>
     <% end %>
   </div>
+  <section class="modal--show" id="modal-text-<%= listing.id %>" tabindex="-1"
+        role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+    <div class="modal-inner">
+      <aside><%= image_tag listing.picture.url %></aside>
+      <article>
+        <h1><%= listing.title %></h1>
+        <h3><%= listing.created_at.strftime("%Y-%m-%d") %></h3>
+        <p><%= listing.detail %></p>
+      </article>
+      <div class="spec">
+        <h2><%= listing.tag_list %>,</h2>
+        <h2><%= listing.realprice %></h2>
+      </div>
+    </div>
+    <a href="#!" class="modal-close" title="Close this modal" data-close="Close"
+        data-dismiss="modal">?</a>
+  </section>
 </li>

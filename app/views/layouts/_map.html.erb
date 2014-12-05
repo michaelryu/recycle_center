@@ -1,2 +1,14 @@
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<script type='text/javascript'>
+  L.mapbox.accessToken = 'pk.eyJ1IjoibWljaGFlbHJ5dSIsImEiOiJ1YVJNaWtVIn0.AdYv2CVjg0mfIDyilxa8Lg';
+    var map = L.mapbox.map('map', 'examples.map-i86nkdio')
+    .setView([36.357537, 127.32399], 16);
+  
+  L.marker([36.357537, 127.32399], {
+    icon: L.mapbox.marker.icon({
+        'marker-size': 'large',
+        'marker-color': '#f86767'
+    })
+  }).addTo(map);
+  map.scrollWheelZoom.disable();
+  map.doubleClickZoom.disable();
+</script>

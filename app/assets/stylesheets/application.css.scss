@@ -7,6 +7,9 @@
 @import "session";
 @import "footer";
 @import "listing";
+@import "modal";
+
 .wrapper {
   margin-bottom: 2em;
+  min-height: 38em;
 }
