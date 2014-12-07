@@ -28,6 +28,14 @@ gem 'normalize-rails',         '3.0.1'
 gem 'nokogiri',                '1.6.5'
 gem 'htmlentities',            '4.3.2'
 gem 'nokogiri_truncate_html',  '0.0.4'
+gem 'capistrano-rvm', github: "capistrano/rvm"
+#gem 'capistrano-rbenv', github: "capistrano/rbenv"
+gem 'capistrano', '~> 3.3.3'
+gem 'capistrano-bundler', '~> 1.1.3'
+gem 'capistrano-rails', '~> 1.1.2'
+gem 'capistrano-passenger'
+gem 'sqlite3'
+
 
 group :development, :test do
   gem 'sqlite3'
