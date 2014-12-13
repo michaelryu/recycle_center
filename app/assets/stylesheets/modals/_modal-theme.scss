@@ -34,7 +34,7 @@
     margin-right: 0;
     img {
       display: block;
-      width: 100%;
+      width: 95%;
     }
   }
   article {
@@ -43,10 +43,10 @@
       @include span-columns(4);
     }
 
-    padding: 3% 1% 0 1%;
+    padding: 3% 3% 0 1%;
     h1 {
       padding-bottom: 0.9em;
-      font-size: 2.2em;
+      font-size: 2vw;
       color: $green;
       margin: 0;
       text-align: left;
@@ -60,7 +60,7 @@
     p {
       text-align: left;
       white-space: pre-wrap;
-      font: 500 1em/1.8 Helvetica;
+      font: 500 1.1vw/1.8 Helvetica;
     }
   }
   .spec {
